@@ -28,3 +28,23 @@ connection.query(seedsSql, (err) => {
   if (err) throw err;
   console.log('seeds.sql file executed successfully!');
 });
+
+// define the questions to prompt the user
+const questions = [
+    {
+      type: 'list',
+      name: 'query',
+      message: 'What would you like to do?',
+      choices: [
+        'View All Employees',
+        'Add Employee',
+        'Update Employee Role',
+        'View All Roles',
+        'Add Role',
+        'View All Departments',
+        'Add Department'
+    ]
+    prefix: '(Use arrow keys to select)'
+    suffix: '(Move up and down to reveal more)'
+    }
+  ];
