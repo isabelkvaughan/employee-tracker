@@ -14,19 +14,6 @@ const db = mysql.createConnection({
   console.log(`Connected to database.`);
 });
 
-  // source the schema.sql and seeds.sql files
-const schemaSql = fs.readFileSync('./db/schema.sql', 'utf8');
-db.query(schemaSql, (err) => {
-  if (err) throw err;
-  console.log('schema.sql file executed successfully!');
-});
-
-// const seedsSql = fs.readFileSync('./db/seeds.sql', 'utf8');
-// db.query(seedsSql, (err) => {
-//   if (err) throw err;
-//   console.log('seeds.sql file executed successfully!');
-// });
-
 // define the questions to prompt the user
 const questions = [
     {
